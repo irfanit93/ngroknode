@@ -8,7 +8,7 @@ console.log('request received');
 res.send('Nodejsngrok repo');
 });
 app.post('/received',function(req,res){
-console.log('request received at received port 3000'+httpHeaders(req).x-github-event);
+console.log('request received at received port 3000'+request.headers['X-Github-Event']);
 res.send('Nodejsngrok repo'+req.body);
 });
 app.listen(3000,function(){
