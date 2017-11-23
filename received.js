@@ -1,3 +1,4 @@
+const http=require('http');
 const express=require('express');
 const app=express();
 const bodyParser=require('body-parser');
@@ -8,7 +9,7 @@ console.log('request received');
 res.send('Nodejsngrok repo');
 });
 app.post('/received',function(req,res){
-console.log('request received at received port 3000'+req.getHeader('X-Github-Event'));
+console.log('request received at received port 3000'+request.getHeader('X-Github-Event'));
 res.send('Nodejsngrok repo'+req.body);
 });
 app.listen(3000,function(){
